@@ -43,7 +43,7 @@ class CalculadoraTest {
         //Assign - Validar o resultado obtido
         Assertions.assertEquals(saidaEsperada, saidaObtida);
     }@Test
-    public void testarDividirDoisInteirosComSucesso() throws Exception {
+    public void testarDividirDoisInteirosComSucesso() throws ArithmeticException {
         //Arrange - Definir cenario de teste
         Calculadora calc = new Calculadora();
         int entradaNumeroUm = 10;

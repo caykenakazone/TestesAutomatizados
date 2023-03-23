@@ -10,12 +10,12 @@ public class CalculadoraTest {
 	
 	@Test
 	public void testarConstrutorSemParametroIniciaMemoriaComZero() {
-		//definir cenário
-		int resultadoEsperado = 0;
-		
-		//executar
 		calc = new Calculadora();
-		int resultadoObtido = calc.getMemoria();
+		//definir cenário
+		int memoriaEsperada = 0;
+
+		//executar
+		int memoriaObtida = calc.getMemoria();
 		
 		//comparar
 		assertEquals(resultadoEsperado, resultadoObtido);

@@ -95,14 +95,14 @@ public class CalculadoraTest {
 
 	@Test
 	public void testarMetodoExponenciar1(){
-		Calculadora calc = new Calculadora(1);
+		Calculadora calc = new Calculadora();
 
 		assertThrows(Exception.class, ()->calc.exponenciar(1));
 	}
 
 	@Test
 	public void testarMetodoExponenciarPor10() {
-		Calculadora calc = new Calculadora(1);
+		Calculadora calc = new Calculadora(10);
 
 		assertThrows(Exception.class, ()->calc.exponenciar(11));
 	}
@@ -110,6 +110,9 @@ public class CalculadoraTest {
 	@Test
 	public void testarMetodoZerarMemoria(){
 		Calculadora calc = new Calculadora(1);
-
+		calc.zerarMemoria();
+		int memoriaEsperada = 0;
+		int memoriaObtida = calc.getMemoria();
+		assertEquals(memoriaEsperada, memoriaObtida);
 	}
 }

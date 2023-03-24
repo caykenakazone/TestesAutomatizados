@@ -41,4 +41,7 @@ public class Calculadora {
 			this.memoria *= this.memoria;
 		}
 	}
+	public void zerarMemoria() {
+		this.memoria = 0;
+	}
 }

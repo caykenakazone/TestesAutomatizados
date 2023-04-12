@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a58e855c-f085-4bfd-b2da-f07178f237dc" name="Changes" comment="" />
+    <list default="true" id="a58e855c-f085-4bfd-b2da-f07178f237dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Atividade3/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Atividade3/src/main/java/pessoa/FuncionarioTercerizado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Atividade3/src/main/java/pessoa/FuncionarioTercerizadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +28,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/CarlosCayke/TestesAutomatizados/teste-calculadora-modelo/calculadora-maven-aula/.classpath",
+    "last_opened_file_path": "C:/CarlosCayke/POO2/ExPolimorfismo",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"

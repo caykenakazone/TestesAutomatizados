@@ -6,28 +6,42 @@ public class Funcionario {
     private double valorHora;
 
     public Funcionario(String nome, int horasTrabalhadas, double valorHora) {
-        this.nome = nome;
-        this.horasTrabalhadas = horasTrabalhadas;
-        this.valorHora = valorHora;
+        this.nome = validaNome(nome);
+        this.horasTrabalhadas = validaHoras(horasTrabalhadas);
+        this.valorHora = validaValorHoras(valorHora);
     }
 
     public Funcionario() {}
+
+    public String validaNome(String nome){
+        if (nome.isEmpty()) {
+            throw new IllegalArgumentException("Nome inválido");
+        }else{
+            return nome;
+        }
+    }
+    public int validaHoras(int horasTrabalhadas){
+        if (horasTrabalhadas < 40 && horasTrabalhadas >0) {
+            return horasTrabalhadas;
+        }else{
+            throw new IllegalArgumentException("O número de horas trabalhadas por funcionários próprios deve ser menor ou igual a 40.");
+        }
+    }
+    public double validaValorHoras(double valorHora){
+        double salarioMinimo = 1320.00;
+        double valorMinimoHora = salarioMinimo * 0.04;
+        double valorMaximoHora = salarioMinimo * 0.10;
+        if (valorHora>valorMinimoHora && valorHora < valorMaximoHora && valorHora>0){
+            return valorHora;
+        }else{
+            throw new IllegalArgumentException("Valor por hora inválido");
+        }
+    }
 
     public double calcularPagamento(){
         double valorHora = getValorHora();
         int horasTrabalhadas = getHorasTrabalhadas();
         double salarioMinimo = 1320.00;
-        double valorMinimoHora = salarioMinimo * 0.04;
-        double valorMaximoHora = salarioMinimo * 0.10;
-
-        if (horasTrabalhadas > 40) {
-            throw new IllegalArgumentException("O número de horas trabalhadas por funcionários próprios deve ser menor ou igual a 40.");
-        }
-
-        if (valorHora<valorMinimoHora || valorHora > valorMaximoHora){
-            throw new IllegalArgumentException("Valor por hora inválido");
-        }
-
         double pagamento = valorHora * horasTrabalhadas;
         if (pagamento < salarioMinimo) {
             pagamento = salarioMinimo;
@@ -39,11 +53,12 @@ public class Funcionario {
         double valorMinimoHora = salarioMinimo * 0.04;
         double valorMaximoHora = salarioMinimo * 0.10;
 
-        if (novoValor < valorMinimoHora || novoValor > valorMaximoHora){
+        if (novoValor > valorMinimoHora && novoValor < valorMaximoHora){
+            this.valorHora = novoValor;
+        }else{
             throw new IllegalArgumentException("Valor por hora inválido");
         }
 
-        this.valorHora = novoValor;
     }
 
     public String getNome() {
@@ -59,7 +74,7 @@ public class Funcionario {
     }
 
     public void setHorasTrabalhadas(int horasTrabalhadas) {
-        this.horasTrabalhadas = horasTrabalhadas;
+        this.horasTrabalhadas = validaHoras(horasTrabalhadas);
     }
 
     public double getValorHora() {
@@ -67,6 +82,6 @@ public class Funcionario {
     }
 
     public void setValorHora(double valorHora) {
-        this.valorHora = valorHora;
+        this.valorHora = validaValorHoras(valorHora);
     }
 }

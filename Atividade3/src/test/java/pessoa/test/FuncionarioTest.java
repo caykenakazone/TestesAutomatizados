@@ -1,5 +1,6 @@
 package pessoa.test;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.testng.annotations.Test;
 import pessoa.entity.Funcionario;
@@ -14,6 +15,8 @@ public class FuncionarioTest {
     }
     @Test
     public void testarSetNome(){
-        funcionario.
+        funcionario.setNome("Cayke");
+        Assertions.assertEquals("Cayke",funcionario.getNome());
+
     }
 }

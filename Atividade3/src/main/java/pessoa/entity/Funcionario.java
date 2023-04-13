@@ -13,6 +13,39 @@ public class Funcionario {
 
     public Funcionario() {}
 
+    public double calcularPagamento(){
+        double valorHora = getValorHora();
+        int horasTrabalhadas = getHorasTrabalhadas();
+        double salarioMinimo = 1320.00;
+        double valorMinimoHora = salarioMinimo * 0.04;
+        double valorMaximoHora = salarioMinimo * 0.10;
+
+        if (horasTrabalhadas > 40) {
+            throw new IllegalArgumentException("O número de horas trabalhadas por funcionários próprios deve ser menor ou igual a 40.");
+        }
+
+        if (valorHora<valorMinimoHora || valorHora > valorMaximoHora){
+            throw new IllegalArgumentException("Valor por hora inválido");
+        }
+
+        double pagamento = valorHora * horasTrabalhadas;
+        if (pagamento < salarioMinimo) {
+            pagamento = salarioMinimo;
+        }
+        return pagamento;
+    }
+    public void modificarValorPagamento(double novoValor) {
+        double salarioMinimo = 1320.00;
+        double valorMinimoHora = salarioMinimo * 0.04;
+        double valorMaximoHora = salarioMinimo * 0.10;
+
+        if (novoValor < valorMinimoHora || novoValor > valorMaximoHora){
+            throw new IllegalArgumentException("Valor por hora inválido");
+        }
+
+        this.valorHora = novoValor;
+    }
+
     public String getNome() {
         return nome;
     }

@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Atividade3Corrigindo" />
+        <module name="org.iftm.projetoAluno" />
+        <module name="Atividade3" />
       </profile>
     </annotationProcessing>
   </component>

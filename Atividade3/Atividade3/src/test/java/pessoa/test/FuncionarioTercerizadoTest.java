@@ -1,0 +1,45 @@
+package pessoa.test;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import pessoa.entity.Funcionario;
+import pessoa.entity.FuncionarioTercerizado;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class FuncionarioTercerizadoTest {
+
+    private FuncionarioTercerizado funcionarioTercerizado;
+    @BeforeEach
+    public void funcTercerizado(){new FuncionarioTercerizado(200);
+    }
+    @Test
+    public void testarConstrutorEntradaDespesasInvalida() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            FuncionarioTercerizado funcionarioTercerizado1 = new FuncionarioTercerizado(1200);
+        });
+    }
+    @Test
+    public void testarConstrutorEntradasValida(){
+         FuncionarioTercerizado funTercerizado = new FuncionarioTercerizado(500);
+        assertEquals(500,funTercerizado.getDespesasAdicionais());
+    }
+
+    @Test
+    public void testarModificarDespesasEntradaInvalida(){
+        assertThrows(IllegalArgumentException.class, ()->{
+            FuncionarioTercerizado funcionarioTercerizado = new FuncionarioTercerizado(100);
+            funcionarioTercerizado.setDespesasAdicionais(1200);
+        });
+    }
+
+    @Test
+    public void testarModificarDespesasEntradaValida(){
+        FuncionarioTercerizado funTercerizado = new FuncionarioTercerizado(500);
+        assertEquals(500,funTercerizado.getDespesasAdicionais());
+    }
+
+
+}
+

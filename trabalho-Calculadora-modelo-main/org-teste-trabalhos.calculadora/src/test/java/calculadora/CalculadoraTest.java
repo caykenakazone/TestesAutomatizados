@@ -87,7 +87,7 @@ public class CalculadoraTest {
 	@Test
 	public void testarMetodoMDividirPorPositivo() throws Exception {
 		calc = new Calculadora(9);
-		calc.dividir(3);
+			calc.dividir(3);
 		int memoriaEsperada = 3;
 		int memoriaObtida = calc.getMemoria();
 		assertEquals(memoriaEsperada,memoriaObtida);

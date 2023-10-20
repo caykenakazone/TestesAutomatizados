@@ -1,4 +1,4 @@
-<img src="https://th.bing.com/th/id/OIP.uLbjVlSU81eGED8nmd0kkQHaDj?pid=ImgDet&rs=1" width="900px" height="500px">
+<img src="https://www.kualitee.com/wp-content/uploads/2021/06/Automation-Testing.jpg" width="900px" height="500px">
 
 # Testes Automzatizados
  Esse projeto para a matéria de Aplicação para dispositvos móveis fizemos a criação de um Sisitema para um leilão.

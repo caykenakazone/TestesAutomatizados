@@ -1,4 +1,4 @@
-<img src="https://static.vecteezy.com/ti/vetor-gratis/p1/2920440-automatizado-teste-software-auto-testador-conceito-depuracao-e-garantia-de-qualidade-computador-transportador-para-bugs-robo-bracos-e-sistema-de-rastreamento-de-defeitos-vetor.jpg" width="900px" height="500px">
+<img src="https://th.bing.com/th/id/OIP.uLbjVlSU81eGED8nmd0kkQHaDj?pid=ImgDet&rs=1" width="900px" height="500px">
 
 # Testes Automzatizados
  Esse projeto para a matéria de Aplicação para dispositvos móveis fizemos a criação de um Sisitema para um leilão.
